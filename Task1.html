@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blinkit - Welcome to Blinkit!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background: #9edccc;
+      color: #0e0c0c;
+      padding: 10px;
+    }
+    
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    nav ul li {
+      margin-right: 20px;
+      text-align: left;
+    }
+    
+    nav ul li a {
+      color: #050404;
+      text-decoration: none;
+      text-align: left;
+
+    }
+    
+    .hero {
+      background: url('food.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .hero-content {
+      color: #040509;
+    }
+    
+    .features {
+      padding: 30px;
+      color: #050808;
+      background: #a4f3e0;
+      text-align: left;
+    }
+    
+    .about {
+      padding: 20px;
+      color: #070705;
+      background: #cce6ac;
+      text-align: left;
+    }
+    
+    .contact {
+      padding: 20px;
+      color: #040807;
+      background: #e9d2a3;
+      text-align: left;
+    }
+    
+    footer {
+      background: #333;
+      color: #a85151;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var signUpButton = document.getElementById('SIGNUP');
+      signUpButton.addEventListener('click', function() {
+        alert('You can sign up using this button!');
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">BlinkIt</div>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover the Power of Blinkit in Minutes. Have everything delivered at your doorstep</h1>
+      <p>Save your time and energy by having groceries at your fingertips</p>
+       <b><a href="#signup" id="SIGNUP" class="btn">Sign up now</a></div></b>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Discounted prices with best quality</li>
+      <li>Fast and reliable service</li>
+      <li>No roadblocks with delivering goods</li>
+    </ul>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Blinkit</h2>
+    <p>BlinkIt is a revolutionary innovation which deliver goods in a blink of an eye!</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or feedback? Reach out to us at feedback@blinkit.com!</p>
