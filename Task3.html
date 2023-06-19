@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eff3cefa;
+    }
+    
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #000000;
+      background-color:#b0d4fc;
+      color:#020303;
+      border-radius: 5px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+      
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="number"] {
+      width: 100%;
+      padding: 5px;
+    }
+    
+    select {
+      width: 100%;
+      padding: 5px;
+    }
+    
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #36c482;
+      color: #020302;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function convertTemperature() {
+      var input = document.getElementById('temperature').value;
+      var unit = document.getElementById('unit').value;
+      var convertedTemp;
+      
+      if (unit === 'celsius') {
+        convertedTemp = (input * 9/5) + 32;
+        document.getElementById('result').textContent = convertedTemp + " °F";
+      } else if (unit === 'fahrenheit') {
+        convertedTemp = (input - 32) * 5/9;
+        document.getElementById('result').textContent = convertedTemp + " °C";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Temperature Converter</h1>
+    <div class="form-group">
+      <label for="temperature">Temperature:</label>
+      <input type="number" id="temperature" placeholder="Enter temperature" required>
+    </div>
+    <div class="form-group">
+      <label for="unit">Unit:</label>
+      <select id="unit">
+        <option value="celsius">Celsius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+      </select>
+    </div>
+    <button onclick="convertTemperature()">Convert</button>
+    <div id="result"></div>
+  </div>
+</body>
+</html>
